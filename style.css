@@ -1,0 +1,71 @@
+.cloud-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c8eb00;
+    overflow: hidden;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.cloud {
+    position: relative;
+    width: 90vw;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.word {
+    /* position: absolute; */
+    /* white-space: nowrap; */
+    user-select: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* transition: all 0.5s ease-in-out; */
+    
+    text-align: center;
+    max-width: 45%;
+    /* background-color: rgb(65, 65, 149); */
+}
+
+
+.word h4 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 0.8;
+}
+.word p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1;
+}
+.word .word-desc {
+    margin: 0;
+    font-size: 0.5em;
+}        
+.active {
+    color: black;
+    z-index: 10;
+    font-size: 5em;
+    position: absolute;
+    transition: transform 3s ease-in-out, scale 1.7s, color 1.5s, z-index 1s;
+    scale: 1.1;
+    cursor: default;
+    /* transform: scale(1.2); */ /*эксперимент */
+}
+.inactive {
+    color: #fff;
+    z-index: 1;
+    font-size: 3.5em;
+    transition: transform 3s ease-in-out, scale 1.3s, z-index 1s;
+    cursor: pointer;
+    scale: 0.8;
+    /* transform: scale(1); */ /* эксперимент */
+}
+
+.inactive:hover h4, .inactive:hover p{
+    text-shadow: 0 0 15px rgba(106, 108, 125, 0.5);
+    transition: text-shadow 1s;
+
+}
